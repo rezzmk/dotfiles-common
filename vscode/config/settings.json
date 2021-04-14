@@ -1,0 +1,13 @@
+{
+    "editor.tabSize": "4",
+    "editor.insertSpaces": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "python.defaultInterpreterPath": "C:\\Users\\rezzmk\\anaconda3\\python.exe",
+    "window.zoomLevel": 3,
+    "workbench.colorTheme": "Just Black"
+}
