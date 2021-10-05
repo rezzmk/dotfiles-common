@@ -3,12 +3,12 @@ Import-Module oh-my-posh
 
 Set-PoshPrompt -Theme Aliens
 
-cd "C:\@\appointmaster\repo-main"
+cd $([System.Environment]::GetEnvironmentVariable('WORK_MAIN_REPO_DIR','machine'))
 
 function reload-profile { & $PROFILE }
 function get-git-status { git status }
 function git-lfg { git add .; git commit -m $args; git push }
-function edit-config-ini { vim C:\@\appointmaster\shared\config\config.ini }
+function edit-config-ini { vim $([System.Environment]::GetEnvironmentVariable('WORK_CONFIGURATION_FILE','machine')) }
 function edit-win-term-profile { 
   vim %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
 }
