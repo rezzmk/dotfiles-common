@@ -1,0 +1,12 @@
+source .vimrc
+
+" Jetbrains specific stuff (I think)
+set ideajoin
+set easymotion
+set ideaput
+set highlitghtedyank
+set surround
+set NERDTree
+
+" !WipeReg to wipe the registers
+command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
