@@ -11,3 +11,5 @@ function MkLink {
 
 MkLink "$pwd\vim\ideavimrc" "~\.ideavimrc"
 MkLink "$pwd\vim\vimrc" "~\.vimrc"
+MkLink "$pwd\vim\vimrc_base" "~\.vimrc_base"
+MkLink "$pwd\vim\vimrc_remaps_common" "~\.vimrc_remaps_common"

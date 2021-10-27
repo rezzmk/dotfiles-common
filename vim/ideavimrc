@@ -1,12 +1,26 @@
-source .vimrc
+source ~/.vimrc_base
+source ~/.vimrc_remaps_common
 
-" Jetbrains specific stuff (I think)
-set ideajoin
+" ----- Ideavim specific
 set easymotion
-set ideaput
-set highlitghtedyank
-set surround
-set NERDTree
+set commentary
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+" ----- Leader mappings
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+map <leader>c <Action>(Stop)
+map <leader>i <Action>(QuickImplementations)
+map <leader>s <Action>(ShowErrorPreview)
+map <leader>a <Action>(Annotate)
+map <leader>o <Action>(FileStructurePopup)
+
+" ----- Ideavim maps
+map \r <Action>(ReformatCode)
 
 " !WipeReg to wipe the registers
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
