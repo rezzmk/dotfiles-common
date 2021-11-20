@@ -1,6 +1,9 @@
 source ~/.vimrc_base
 source ~/.vimrc_remaps_common
 
+set clipboard+=unnamed
+set paste
+
 " ----- Ideavim specific
 set easymotion
 set commentary

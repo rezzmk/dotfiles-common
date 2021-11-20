@@ -2,9 +2,9 @@ Import-Module posh-git
 Import-Module oh-my-posh
 Import-Module Terminal-Icons
 
-#Set-PoshPrompt -Theme mt
+Set-PoshPrompt -Theme mt
 #Set-PoshPrompt -Theme marcduiker
-Set-PoshPrompt -Theme material
+#Set-PoshPrompt -Theme material
 
 cd $([System.Environment]::GetEnvironmentVariable('WORK_MAIN_REPO_DIR','machine'))
 

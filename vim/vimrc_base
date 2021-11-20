@@ -1,27 +1,3 @@
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
-
-" Bail out if something that ran earlier, e.g. a system wide vimrc, does not
-" want Vim to use these default values.
-if exists('skip_defaults_vim')
-  finish
-endif
-
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-" Avoid side effects when it was already reset.
-if &compatible
-  set nocompatible
-endif
-
-" When the +eval feature is missing, the set command above will be skipped.
-" Use a trick to reset compatible only when the +eval feature is missing.
-silent! while 0
-  set nocompatible
-silent! endwhile
-
 " Do not recognize octal numbers for auto inc/dec operations
 set nrformats-=octal
 
@@ -40,10 +16,6 @@ if has('mouse')
     set mouse=nvi
   endif
 endif
-
-" Disable bells
-set noerrorbells
-set vb t_vb=
 
 " Returns true if paste mode is enabled
 function! HasPaste()
@@ -346,3 +318,7 @@ try
 catch
 endtry
 
+" Disable bells
+set noerrorbells
+set visualbell
+set vb t_vb=
